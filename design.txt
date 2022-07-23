@@ -1,0 +1,23 @@
+Attorney Tom and the Hammers of Knowledge
+
+vertical scrolling shooter
+speed and amount ramp up gradually
+
+the corporation has sent evil robots after you
+knowledge hammer the bots to get money for your clients
+
+
+blimp background
+tom
+hammer
+bots (maybe have a destroyed sprite)
+osha manuals exploding
+
+
+menu
+level
+-score
+-lives (3)
+--lives go away if you get hit by an explosion or if a bot gets by you
+game over screen
+-display final score
