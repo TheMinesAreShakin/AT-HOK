@@ -1,4 +1,4 @@
-Attorney Tom and the Hammers of Knowledge
+Attorney Tom and the Hammer of Knowledge
 
 vertical scrolling shooter
 speed and amount ramp up gradually
@@ -12,7 +12,7 @@ tom
 hammer
 bots (maybe have a destroyed sprite)
 osha manuals exploding
-
+tom flies in on a blimp
 
 menu
 level
