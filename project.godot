@@ -10,7 +10,8 @@ config_version=4
 
 [application]
 
-config/name="AT-HOK"
+config/name="Attorney Tom and the Hammer of Knowledge"
+run/main_scene="res://src/levels/Level01.tscn"
 config/icon="res://icon.png"
 
 [display]
