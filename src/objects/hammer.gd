@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var veloctiy: int = 3000
+var veloctiy: int = 1500
 
 
 func _process(delta: float) -> void:
