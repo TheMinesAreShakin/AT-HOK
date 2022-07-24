@@ -14,6 +14,10 @@ config/name="Attorney Tom and the Hammer of Knowledge"
 run/main_scene="res://src/levels/Level01.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerData="*res://src/autoload/PlayerData.tscn"
+
 [display]
 
 window/size/width=600
@@ -65,6 +69,7 @@ Shoot={
 2d_physics/layer_1="player"
 2d_physics/layer_2="hammers"
 2d_physics/layer_3="enemies"
+2d_physics/layer_4="projectiles"
 
 [physics]
 

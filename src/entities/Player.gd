@@ -33,6 +33,9 @@ func _process(delta: float) -> void:
 	$".".global_position.x = clamp($".".global_position.x, player_lower_limit.x, player_upper_limit.x)
 	$".".global_position.y = clamp($".".global_position.y, player_lower_limit.y, player_upper_limit.y)
 	
+	#update player position in data
+	PlayerData.position = $".".global_position
+	
 	# check shooting
 	shoot()
 
