@@ -7,6 +7,10 @@ signal player_lost_health
 
 var score: int = 0 setget set_score, get_score
 var health: int = 0 setget set_health, get_health
+
+"""I'm storing position here so it is easily accessible for the enemy class
+this is a non-standard way to do it but I think it is more readable than the
+string of getting nodes that would be required otherwise"""
 var position: Vector2 = Vector2.ZERO setget set_position, get_position
 
 
