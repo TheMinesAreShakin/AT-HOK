@@ -21,6 +21,9 @@ var hammer_scene: PackedScene = preload("res://src/objects/Hammer.tscn")
 onready var timer: Node = $Timer
 export var shot_delay: float = 0.33
 
+# signal for player health changing
+signal health_updated
+
 func _process(delta: float) -> void:
 	# get player movement direction and set velocity
 	direction = get_input_direction()
@@ -65,3 +68,8 @@ func shoot() -> void:
 		
 		# add hammer as child of level
 		get_parent().add_child(new_hammer)
+
+
+func _on_Hitbox_body_entered(body: Node) -> void:
+	PlayerData.health -= 1
+	emit_signal("health_updated")

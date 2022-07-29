@@ -1,12 +1,13 @@
 extends Node
 
-# defines custom signals that can be emitted using emit_signal("[signal name]")
-signal score_updated
-signal player_died
-signal player_lost_health
+"""I initially had the signals for update_score, player_death, and healt_update in here
+but I decided to move them to the nodes that will be doing those updates in the first
+place. This will also help fall into the 'signal up call down' best practice. Although
+whether that will count very much with an autoload I'm not quite sure since we can always
+expect the autoload to be there. but hey, loose coupling or some fancy software eng term like that"""
 
 var score: int = 0 setget set_score, get_score
-var health: int = 0 setget set_health, get_health
+var health: int = 10 setget set_health, get_health
 
 """I'm storing position here so it is easily accessible for the enemy class
 this is a non-standard way to do it but I think it is more readable than the
@@ -17,7 +18,6 @@ var position: Vector2 = Vector2.ZERO setget set_position, get_position
 
 func set_score(value: int) -> void:
 	score = value
-	emit_signal("score_updated")
 
 
 func get_score() -> int:
@@ -26,10 +26,6 @@ func get_score() -> int:
 
 func set_health(value: int) -> void:
 	health = value
-	emit_signal("player_lost_health")
-	
-	if health <= 0:
-		emit_signal("player_died")
 
 
 func get_health() -> int:

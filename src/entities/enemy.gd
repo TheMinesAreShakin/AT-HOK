@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-
+export var set_fire = true
 export var velocity: int = 100
 export var fire_delay: float = 1.5
 var projectile: PackedScene = preload("res://src/objects/Projectile.tscn")
@@ -30,7 +30,7 @@ func remove_off_screen() -> void:
 
 
 func fire() -> void:
-	if $Timer.is_stopped():
+	if $Timer.is_stopped() and set_fire:
 		# instance projectile
 		var new_projectile: Node = projectile.instance()
 		# set projectile position to position of emitter

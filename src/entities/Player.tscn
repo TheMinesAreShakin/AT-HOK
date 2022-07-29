@@ -34,3 +34,5 @@ collision_mask = 12
 modulate = Color( 0.00784314, 0.231373, 1, 1 )
 position = Vector2( -1, -2 )
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]
