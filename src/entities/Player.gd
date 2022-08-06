@@ -73,3 +73,5 @@ func shoot() -> void:
 func _on_Hitbox_body_entered(body: Node) -> void:
 	PlayerData.health -= 1
 	emit_signal("health_updated")
+	if body.is_in_group("projectiles"):
+		body.queue_free()
