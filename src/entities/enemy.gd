@@ -24,8 +24,9 @@ func die(body: Node) -> void:
 
 
 func remove_off_screen() -> void:
-	# free when enemy moves off screen
+	# free when enemy moves off screen also deduct point of health
 	if $".".global_position.y > ProjectSettings.get_setting("display/window/size/height") + 35:
+		PlayerData.health -= 1
 		queue_free()
 
 

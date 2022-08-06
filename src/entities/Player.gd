@@ -21,8 +21,6 @@ var hammer_scene: PackedScene = preload("res://src/objects/Hammer.tscn")
 onready var timer: Node = $Timer
 export var shot_delay: float = 0.33
 
-# signal for player health changing
-signal health_updated
 
 func _process(delta: float) -> void:
 	# get player movement direction and set velocity
@@ -72,6 +70,5 @@ func shoot() -> void:
 
 func _on_Hitbox_body_entered(body: Node) -> void:
 	PlayerData.health -= 1
-	emit_signal("health_updated")
 	if body.is_in_group("projectiles"):
 		body.queue_free()
