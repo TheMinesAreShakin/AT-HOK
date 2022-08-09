@@ -32,13 +32,6 @@ func get_health() -> int:
 	return health
 
 
-func hit_player_for(damage_amount: int):
-	# specifying self.health will use the setter function as well
-	#self.health -= damage_amount
-	# I think the following way makes the code more explicit #thezenofpython
-	set_health(health - damage_amount)
-
-
 func set_position(value: Vector2) -> void:
 	position = value
 
