@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 
 
 func _on_HitBox_body_entered(body: Node) -> void:
+	PlayerData.score += 1
 	die(body)
 
 
