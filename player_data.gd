@@ -16,6 +16,11 @@ it could probably be done using a signal but this is working now so whatever."""
 var position: Vector2 = Vector2.ZERO setget set_position, get_position
 
 
+func reset_game() -> void:
+	score = 0
+	health = 10
+
+
 func set_score(value: int) -> void:
 	score = value
 

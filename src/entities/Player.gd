@@ -17,6 +17,9 @@ var player_upper_limit: Vector2 = window_size - player_buffer
 # preload hammmer scene
 var hammer_scene: PackedScene = preload("res://src/objects/Hammer.tscn")
 
+#preload death screen
+var death_screen_scene: PackedScene = preload("res://src/menus/DeathScreen.tscn")
+
 # shot delay vars
 onready var timer: Node = $Timer
 export var shot_delay: float = 0.33
@@ -70,5 +73,10 @@ func shoot() -> void:
 
 func _on_Hitbox_body_entered(body: Node) -> void:
 	PlayerData.health -= 1
+	
+	#free projectile once it hits player
 	if body.is_in_group("projectiles"):
 		body.queue_free()
+	
+	if PlayerData.health <= 0:
+		get_tree().change_scene_to(death_screen_scene)
