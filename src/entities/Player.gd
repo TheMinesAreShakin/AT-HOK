@@ -73,6 +73,7 @@ func shoot() -> void:
 
 func _on_Hitbox_body_entered(body: Node) -> void:
 	PlayerData.health -= 1
+	$HitSound.play()
 	
 	#free projectile once it hits player
 	if body.is_in_group("projectiles"):
