@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Attorney Tom and the Hammer of Knowledge"
-run/main_scene="res://src/levels/Level01.tscn"
+run/main_scene="res://src/menus/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
